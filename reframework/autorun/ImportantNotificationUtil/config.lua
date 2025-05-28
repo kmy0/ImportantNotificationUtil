@@ -98,9 +98,9 @@ end
 function this.load()
     local loaded_config = json.load_file(this.config_path)
     if loaded_config then
-        this.current = table_util.table_merge(this.default, loaded_config)
+        this.current = table_util.table_merge(this.default, loaded_config) --[[@as Settings]]
     else
-        this.current = table_util.table_deep_copy(this.default)
+        this.current = table_util.table_deep_copy(this.default) --[[@as Settings]]
     end
 end
 
@@ -109,7 +109,7 @@ function this.save()
 end
 
 function this.restore()
-    this.current = table_util.table_deep_copy(this.default)
+    this.current = table_util.table_deep_copy(this.default) --[[@as Settings]]
     this.save()
 end
 
