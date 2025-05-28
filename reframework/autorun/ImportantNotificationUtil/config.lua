@@ -41,7 +41,7 @@ local util = require("ImportantNotificationUtil.util")
 ---@class Config
 local this = {}
 
-this.version = "0.0.1"
+this.version = "0.0.2"
 this.name = "ImportantNotificationUtil"
 this.config_path = this.name .. "/config.json"
 ---@diagnostic disable-next-line: missing-fields
