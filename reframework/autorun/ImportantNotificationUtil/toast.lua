@@ -106,7 +106,9 @@ function this.update_player_cmd_mask_post(retval)
             local master_player = rt.get_playman():getMasterPlayer()
             local hunter_char = master_player:get_Character()
             local player_flags = hunter_char._HunterContinueFlag
-            player_flags:off(200)
+            -- If its not working check in CheatEngine or similar which flag is checked somewhere in app.GUIUtilApp.MapUtil.isCanOpenMap() function
+            local flag = 217
+            player_flags:off(flag)
         end
     end
     return retval
