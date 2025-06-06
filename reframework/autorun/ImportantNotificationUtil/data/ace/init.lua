@@ -45,6 +45,7 @@ function this.init()
     data_util.get_enum("app.GUIFunc.TYPE", this.enum.gui_func)
     data_util.get_enum("ace.GUIDef.INPUT_DEVICE", this.enum.input_device)
     data_util.get_enum("app.GUIDefApp.GAME_KEY_TYPE", this.enum.game_key)
+    data_util.get_enum("app.HunterDef.CONTINUE_FLAG", this.enum.hunter_continue)
 
     local kb_device = rl(this.enum.input_device, "KEYBOARD")
     local kb_raw_key_data = util.system_array_to_lua(inputman:get_RawKeyDefinitonMkb():get_Values())

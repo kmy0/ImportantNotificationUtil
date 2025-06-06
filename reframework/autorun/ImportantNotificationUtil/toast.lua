@@ -11,6 +11,7 @@ local util = require("ImportantNotificationUtil.util")
 local ace = data.ace
 local rt = data.runtime
 local gui = data.gui
+local rl = data.util.reverse_lookup
 
 local this = {}
 
@@ -106,9 +107,7 @@ function this.update_player_cmd_mask_post(retval)
             local master_player = rt.get_playman():getMasterPlayer()
             local hunter_char = master_player:get_Character()
             local player_flags = hunter_char._HunterContinueFlag
-            -- If its not working check in CheatEngine or similar which flag is checked somewhere in app.GUIUtilApp.MapUtil.isCanOpenMap() function
-            local flag = 217
-            player_flags:off(flag)
+            player_flags:off(rl(ace.enum.hunter_continue, "DISABLE_OPEN_MAP"))
         end
     end
     return retval

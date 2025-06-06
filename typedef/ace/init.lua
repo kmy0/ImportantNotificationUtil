@@ -118,3 +118,5 @@
 ---@field get_MkbUIGameKeyDefData fun(self: app.GameInputManager): ace.user_data.GameKeyDefinition
 ---@field get_RawKeyDefinitionPad fun(self: app.GameInputManager): ace.user_data.RawKeyDefinition
 ---@field get_PadUIGameKeyDefData fun(self: app.GameInputManager): ace.user_data.GameKeyDefinition
+
+---@class app.HunterDef.CONTINUE_FLAG : System.Enum

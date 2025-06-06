@@ -7,6 +7,7 @@
 ---@field gui_func table<app.GUIFunc.TYPE, string>
 ---@field input_device table<ace.GUIDef.INPUT_DEVICE, string>
 ---@field game_key table<app.GUIDefApp.GAME_KEY_TYPE, string>
+---@field hunter_continue table<app.HunterDef.CONTINUE_FLAG, string>
 
 ---@class (exact) KeyNameSort
 ---@field pad boolean
@@ -26,6 +27,7 @@ local this = {
         gui_func = {},
         input_device = {},
         game_key = {},
+        hunter_continue = {},
     },
     map = {
         key_name_to_gui_func = {},
